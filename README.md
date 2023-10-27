@@ -6,6 +6,6 @@
 
 ## laste ned filer
 
-- [Download s.xlsx](https://github.com/<samertin>/<test3>/raw/main/s.xlsx)
-- [Download d.xlsk](https://github.com/<sanertin>/<test3>/raw/main/d.xlsk)
+- [Download s.xlsx](https://github.com/<samertin>/<Trondheim>/raw/main/s.xlsx)
+- [Download d.xlsk](https://github.com/<sanertin>/<Trondheim>/raw/main/d.xlsk)
 
