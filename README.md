@@ -9,5 +9,8 @@
 ![Trondheim](https://github.com/<username>/<samertin>/raw/main/trondheim.png)
 - [Download s.xlsx](https://raw.githubusercontent.com/samertin/Trondheim/main/s.xlsx)
 - [Download d.xlsk](https://raw.githubusercontent.com/samertin/Trondheim/main/x.xlsx)
+<head>
+    <link rel="stylesheet" type="text/css" href="/[path-to-your](https://raw.githubusercontent.com/samertin/Trondheim/main)https://raw.githubusercontent.com/samertin/Trondheim/main/custom.css">
+</head>
 
 
