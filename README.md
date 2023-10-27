@@ -6,7 +6,7 @@
 <iframe width="100%" height="900" src="https://samertin.github.io/test/" frameborder="0"></iframe>
 
 ## laste ned filer
-![Trondheim](https://github.com/<samertin>/<Trondheim>/raw/main/trondheim.png)
+![Trondheim](https://github.com/<samertin>/<Trondheim>/raw/main/trondheim.jpg)
 - [Download s.xlsx](https://raw.githubusercontent.com/samertin/Trondheim/main/s.xlsx)
 - [Download d.xlsk](https://raw.githubusercontent.com/samertin/Trondheim/main/d.xlsx)
 <head>
