@@ -5,6 +5,6 @@
 
 ## laste ned filer
 
-- [Download s.xlsx](https://github.com/<samertin>/<Trondheim>/main/s.xlsx)
-- [Download d.xlsk](https://github.com/<sanertin>/<Trondheim>/main/d.xlsk)
+- [Download s.xlsx](https://github.com/samertin/Trondheim/blob/main/s.xlsx)
+- [Download d.xlsk](https://github.com/samertin/Trondheim/blob/main/x.xlsx)
 
