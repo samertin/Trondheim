@@ -8,9 +8,7 @@
 
 ## laste ned filer
 <img src="https://raw.githubusercontent.com/samertin/Trondheim/main/trondheim.jpg" alt="Trondheim">
-![Trondheim](![Trondheim](https://github.com/samertin/Trondheim/raw/main/trondheim.jpg)
 - [Download s.xlsx](https://raw.githubusercontent.com/samertin/Trondheim/main/s.xlsx)
 - [Download d.xlsk](https://raw.githubusercontent.com/samertin/Trondheim/main/d.xlsx)
-<head>
-    <link rel="stylesheet" type="text/css" href="/[path-to-your](https://raw.githubusercontent.com/samertin/Trondheim/main)https://path-to-your/custom.css">
-</head>
+https://raw.githubusercontent.com/samertin/Trondheim/main/custom.css
+<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/samertin/Trondheim/main/custom.css">
