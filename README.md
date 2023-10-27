@@ -3,8 +3,11 @@
 <!-- Copy and paste the embed code provided by YouTube here -->
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/q1_wXN4TaCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## laste ned filer
+<iframe width="100%" height="900" src="https://samertin.github.io/test/" frameborder="0"></iframe>
 
-- [Download s.xlsx](https://github.com/samertin/Trondheim/blob/main/s.xlsx)
-- [Download d.xlsk](https://github.com/samertin/Trondheim/blob/main/x.xlsx)
+## laste ned filer
+![Trondheim](https://github.com/<username>/<samertin>/raw/main/trondheim.png)
+- [Download s.xlsx](https://raw.githubusercontent.com/samertin/Trondheim/main/s.xlsx)
+- [Download d.xlsk](https://raw.githubusercontent.com/samertin/Trondheim/main/x.xlsx)
+
 
