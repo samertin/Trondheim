@@ -1,6 +1,7 @@
 # Velkomen til Trondheim
 - [Befolkning](./Befolkning)
 - [plotly](./plotly)
+- [plotly](./plotly)
 <!-- Copy and paste the embed code provided by YouTube here -->
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/q1_wXN4TaCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
