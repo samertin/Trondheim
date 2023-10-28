@@ -1,6 +1,4 @@
-- [Befolkning](./Befolkning)
-- [plotly](./plotly)
-- [shiny](./shiny)
+ [Befolkning](./Befolkning)  [plotly](./plotly)   [shiny](./shiny)
 <iframe src="sam.html" width="100%" height="425px"></iframe>
 <iframe width="120%" height="400" src="https://www.youtube.com/embed/q1_wXN4TaCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
