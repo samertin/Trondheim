@@ -1,0 +1,109 @@
+---
+title: "Nøkeltall"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+    storyboard: TRUE
+---
+
+```{r pakk, include=FALSE}
+library(plotly)
+library(DT)
+library(dplyr)
+library(flexdashboard)
+library(PxWebApiData)
+library(crosstalk)
+library(blogdown)
+```
+
+
+```{r data, include=FALSE}
+Sys.setlocale("LC_ALL", "Norwegian")
+innb <- as.data.frame(ApiData("https://data.ssb.no/api/v0/no/table/07459/", 
+                              Region=list('agg:KommSummer', c("K-5001")), 
+    
+                              Alder=list('vs:AlleAldre00B', c("000", "001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015", "016", "017", "018", "019", "020", "021", "022", "023", "024", "025", "026", "027", "028", "029", "030", "031", "032", "033", "034", "035", "036", "037", "038", "039", "040", "041", "042", "043", "044", "045", "046", "047", "048", "049", "050", "051", "052", "053", "054", "055", "056", "057", "058", "059", "060", "061", "062", "063", "064", "065", "066", "067", "068", "069", "070", "071", "072", "073", "074", "075", "076", "077", "078", "079", "080", "081", "082", "083", "084", "085", "086", "087", "088", "089", "090", "091", "092", "093", "094", "095", "096", "097", "098", "099", "100", "101", "102", "103", "104", "105+")), 
+                              ContentsCode=TRUE, 
+       
+                                                     Tid=TRUE))
+
+
+```
+
+```{r dataprocessing, include=FALSE}
+# Slette 6 første variable + ContentsCode
+innb <- subset(innb, select = -c(1:7,dataset.ContentsCode) )
+names(innb)[names(innb) == 'dataset.Kjonn'] <- 'Kjønn'
+names(innb)[names(innb) == 'dataset.Alder'] <- 'Alder'
+names(innb)[names(innb) == 'dataset.Tid'] <- 'År'
+names(innb)[names(innb) == 'dataset.value'] <- 'Value'
+
+
+# Opprett en ny dataframe med summen av verdiene for hvert år
+innb_total <- innb %>% 
+  group_by(År) %>%
+  summarise(Value = sum(Value)) %>%
+  mutate(Kjønn = "0")
+
+# Kombiner de to dataframen
+innb <- bind_rows(innb, innb_total)
+
+innbtot <- innb %>% 
+  group_by(År,Kjønn) %>%
+  summarise(Antall = sum(Value)) %>% 
+  mutate(Prosent= prop.table(Antall) * 200)
+innbtot$Kjønn <- factor(innbtot$Kjønn,levels = c("0","1","2"),labels = c("I alt","Menn","Kvinner"))
+innbtot$Antall = format(innbtot$Antall,big.mark = " ")
+innbtot$Prosent = format(innbtot$Prosent,decimal.mark=",",nsmall=1, digits=1)
+
+
+innb <- subset(innb, Kjønn %in% c("1","2"))
+innb$Verdi <-ifelse(innb$Kjønn=="2",innb$Value*-1,innb$Value)
+innb$År = round(as.numeric(innb$År))
+innb$Kjønn <- factor(innb$Kjønn,levels = c("1","2"),labels = c("Menn","Kvinner"))
+#head(innb)
+# Assuming you have a data frame named 'innb'
+innb <- innb %>% filter(grepl("^[0-9]+$", År))
+# Finner første og siste årgang
+f_aar <- min(as.numeric(innb$År), na.rm = TRUE)
+s_aar <- max(as.numeric(innb$År), na.rm = TRUE)
+
+innb_siste_verdi <- sum(subset(innb$Value, innb$År == s_aar))
+innb_for_siste_verdi <- sum(subset(innb$Value, innb$År == s_aar-1))
+Endring <- innb_siste_verdi - innb_for_siste_verdi
+
+innb_siste_formatted <- format(innb_siste_verdi, big.mark = " ")
+innb_for_siste_formatted <- format(innb_for_siste_verdi, big.mark = " ")
+Endring_formatted <- format(Endring, big.mark = " ")
+
+```
+
+
+<style>
+.info-box {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #E0A899;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#box1 { background-color: #FFDDC1; color: #D45A59; }
+#box2 { background-color: #D1FFC1; color: #59D47A; }
+#box3 { background-color: #C1D4FF; color: #5978D4; }
+</style>
+
+
+# Trondheim
+<div class="row">
+  <div class="col-md-4 info-box" id="box1">
+    Total Befolkning 2023: `r innb_siste_formatted`
+  </div>
+  <div class="col-md-4 info-box" id="box2">
+    Total Befolkning 2022: `r innb_for_siste_formatted`
+  </div>
+  <div class="col-md-4 info-box" id="box3">
+    Endring i befolkning: `r Endring_formatted`
+  </div>
+</div>
