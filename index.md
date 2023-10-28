@@ -1,4 +1,4 @@
-[View the sam.html file](sam.html)
+<iframe src="sam.html" width="100%" height="350px"></iframe>
 - [Befolkning](./Befolkning)
 - [plotly](./plotly)
 - [shiny](./shiny)
