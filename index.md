@@ -2,6 +2,7 @@
     <a href="./Befolkning" style="padding: 10px 15px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 3px; margin-right: 10px;">Befolkning</a>
     <a href="./plotly" style="padding: 10px 15px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 3px; margin-right: 10px;">Plotly</a>
     <a href="./shiny" style="padding: 10px 15px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 3px;">Trondheimsregionenprognose </a>
+  <a href="./Powerbi" style="padding: 10px 15px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 3px;">Power_bi</a>
 </div>
 <iframe src="sam.html" width="100%" height="425px"></iframe>
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/q1_wXN4TaCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
